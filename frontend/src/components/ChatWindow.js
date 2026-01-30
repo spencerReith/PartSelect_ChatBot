@@ -12,6 +12,8 @@ function ChatWindow() {
 
   const [messages,setMessages] = useState(defaultMessage)
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+
 
   const messagesEndRef = useRef(null);
 
@@ -30,7 +32,10 @@ function ChatWindow() {
       setInput("");
 
       // Call API & set assistant message
+      setLoading(true);
       const newMessage = await getAIMessage(input);
+      setLoading(false);
+
       setMessages(prevMessages => [...prevMessages, newMessage]);
     }
   };
@@ -47,6 +52,11 @@ function ChatWindow() {
               </div>
           ))}
           <div ref={messagesEndRef} />
+          {loading && (
+            <div className="dot-loader">
+              <span></span><span></span><span></span>
+            </div>
+          )}
           <div className="input-area">
             <input
               value={input}
@@ -60,7 +70,7 @@ function ChatWindow() {
               }}
               rows="3"
             />
-            <button className="send-button" onClick={handleSend}>
+            <button className="send-button" onClick={() => handleSend(input)}>
               Send
             </button>
           </div>

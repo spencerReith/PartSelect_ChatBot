@@ -45,7 +45,7 @@
 .user-message {
   align-self: flex-end;
   font-size: 13px;
-  background-color: #1b3875;
+  background-color: #357777;
   color: #ffffff;
   border-top-right-radius: 0;
   text-align: left;
@@ -53,7 +53,7 @@
 
 .assistant-message {
   align-self: flex-start;
-  background-color: #f6f6f6;
+  background-color: #dcae45;
   border-top-left-radius: 0;
   color: #000000;
   padding: 14px;
@@ -104,8 +104,39 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #121212;
+  background-color: rgba(53, 119, 119, .7); ;
   color: white;
   cursor: pointer;
   font-size: 13px;
+}
+
+.input-area button:hover {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(53, 119, 119, 1); ;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.dot-loader {
+  display: flex;
+  gap: 8px;
+}
+
+.dot-loader span {
+  width: 10px;
+  height: 10px;
+  background: #555;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot-loader span:nth-child(1) { animation-delay: -0.32s; }
+.dot-loader span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
 }
