@@ -53,4 +53,4 @@ flask run
 
 ```
 
-*note: running the agent reuqires Claude API 'ANTHROPIC_KEY' env variable to be set.
+*note: running the agent requires Claude API 'ANTHROPIC_KEY' env variable to be set.
