@@ -2,6 +2,8 @@
 
 This project is a **full-stack multi agent system** featuring a **React** frontend and a **Flask** backend.
 
+Please see the walk through video here: https://www.loom.com/share/01b88d25b9e74a85b9d0948276ea02de
+
 * **Frontend**: Manages the user interface and client-side interactions.
 * **Backend**: Exposes API endpoints and manages server-side logic.
 
